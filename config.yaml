@@ -1,0 +1,18 @@
+# AbuseIPDB CHECK-BLOCK API Yapılandırma Dosyası
+
+output_dir: "."                   # Çıktı dizini
+
+concurrency: 20                   # Eşzamanlı işçi sayısı
+request_timeout: "20s"            # HTTP istek zaman aşımı
+retry_delay: "50ms"               # İstekler arası bekleme süresi
+max_retries: 3                    # Maksimum deneme sayısı
+
+# Network Listesi (CIDR formatında)
+prefixes:
+  - "192.168.0.0/24"
+  - "192.168.100.0/24" 
+
+
+# API Anahtarları
+api_keys:
+  - "API_KEY_1"
