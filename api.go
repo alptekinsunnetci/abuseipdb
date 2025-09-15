@@ -100,7 +100,6 @@ func (c *APIClient) CheckBlock(network string) ([]ReportRow, error) {
 			return nil, err
 		}
 
-		// Son 7 gün içindeki raporları filtrele
 		var rows []ReportRow
 		for _, addr := range parsed.Data.ReportedAddress {
 			if addr.MostRecentReport == "" {
